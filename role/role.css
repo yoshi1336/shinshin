@@ -1,0 +1,321 @@
+/***** video background *****/
+#bgvid {
+    min-width:100%;
+    min-height:100%;
+    width:100%;
+    height:auto;
+    background:#fff;
+    visibility:visible;
+    /*background-size:cover;*/
+}
+
+/***** preload gif *****/
+.preload {
+	margin:0;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-right: -50%;
+	transform:translate(-50%, -50%);
+    z-index: 2;
+}
+
+/***** preloader *****/
+.preloader
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: #000;*/
+    transition: 1s;
+    z-index: 1;
+}
+
+.preloader:before
+{
+    content: '';
+    position: absolute;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+    background: #000;
+    transition: 1s;
+}
+
+.preloader.complete:before
+{
+    left: -50%;
+}
+
+.preloader:after
+{
+    content: '';
+    position: absolute;
+    right: 0%;
+    width: 50%;
+    height: 100%;
+    background: #000;
+    transition: 1s;
+}
+
+.preloader.complete:after
+{
+    right: -50%;
+}
+
+.preloader.complete
+{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/***** navbar CSS *****/
+html,body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: lighter;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    /* viewport height */
+    /*background: url(style.jpg)no-repeat 50% 50%;*/
+    /* color image repeat attachment position */
+    background: orange;
+    background-size: cover;
+}
+
+.content {
+    width: 94%;
+    margin: 4em auto;
+    /*top,bottom 4 times the size of the current font*/
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.logo img {
+    /*position: fixed;*/
+    float: left;
+    margin: 0px 25px;
+    /*background-size: cover;*/
+    height: 80px;
+    /*background-color:blueviolet; */
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    line-height: 60px;
+}
+
+nav ul {
+    line-height: 45px;
+    list-style: none; /*reomve bullet*/
+    background: rgba(0, 0, 0, 0); /*transparent*/
+    overflow: hidden;
+    /*The overflow is clipped, and the rest of the content will be invisible*/
+    color: #fff;
+    padding: 0; /*remove extra space*/
+    text-align: right;
+    margin: 0;
+    padding-right: 40px;
+    transition: 1s;/*background color change*/
+}
+
+nav.black ul { /*when scroll*/
+    background: #ffff00; 
+}
+
+nav ul li { 
+    display: inline-block; /*to a line*/
+    padding: 16px 30px;
+}
+
+nav ul li a { /*text*/
+    text-decoration: none; /*remove underline*/ 
+    color: #fff;
+    font-size: 18px;
+    font-weight: 1;
+}
+
+.menu-icon {
+    line-height: 40px;
+    width: 100%;
+    background: #000;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none; /*display when screen smaller 769px*/
+}
+
+
+
+@media(max-width: 810px) { /*screen smaller than 769px*/
+    #hi img {
+        padding: 0;
+        margin:  0px;
+        margin-top: -50px;
+        margin-left: 100px;
+        margin-right: 0px;
+        height: 80px;
+/*        float: left;*/
+    }
+    #hi h1{
+        text-align: center;
+        float: left;
+    }
+    .logo img {
+        padding: 0;
+        margin: 10;
+        height: 0px;
+        line-height: 0;
+    }
+    .logo h1 {
+        text-align: center;
+    }
+    nav ul {
+        max-height: 0px;
+        background: #345; /*when showing ul background*/
+    }
+    nav.black ul {
+        background: #000; /*when scroll ramain black*/
+    }
+    .showing {
+        max-height: 40em;
+    }
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 2px;
+        text-align: center;
+        border-bottom: 1px dotted #ddd;
+        margin-left: 18px; 
+    }
+    .menu-icon {
+        display:block;
+    }
+}
+
+
+/***** role *****/
+#role1 {
+    padding: 10px 20px;
+    height:auto;
+    min-height: 100vh;
+    background-color: #00ffc9;
+    width: 100%;
+}
+#role1 .container{
+    margin: 120px 50px;
+    font-size: 20px;
+    text-align: justify;
+}
+#role1 img {
+    margin-bottom: 10px;
+}
+#role1 h1 {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+#role2 .container{
+    margin: 80px 50px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+#role2 {
+    padding-top: 1px;
+    height: 100vh;
+    background-color: #f0ffc9;
+    width: 100%;
+}
+#role2 h1 {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+#role2 img {
+    float: right;
+    margin-bottom: 10px;
+}
+
+#role3 {
+    height: 100vh;
+    background-color: #f040c9;
+    width: 100%;
+}
+
+.slideanimate {
+    visibility: hidden;
+}
+.slide {
+    /*    specify animate effect*/
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+/*        transform: translateY(70%);*/
+        transform: translatex(80%);
+    }
+    100% {
+        opacity: 1;
+/*        transform: translateY(0%);*/
+        transform: translatex(0%);
+    }
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+/***** logo *****/
+/*.role {
+    box-sizing: border-box;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    height: 40%;
+    width: 100%;
+    color: #fff;
+    padding: 1em;
+}*/
+
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+}
+
+.icon {
+    padding: 10px 10px;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.icon a {
+    color: #fff;
+}

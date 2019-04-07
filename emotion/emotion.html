@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>password</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- include jQuery library from Google CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="preload"><img src="loading_spinner.gif" /></div>
+    <div class="preloader"></div>
+    <div class="wrapper">
+        <header> 
+            <nav>
+                <div class="menu-icon"><i class="fa fa-bars fa-2x"></i></div>
+                <div class="logo">倖。悻</div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="emotion.html">五種情緒<span></span></a></li>
+                        <li><a href="role.html">人物介紹</a></li>
+                        <li><a href="e-book.html">電子繪本</a></li>
+                        <li><a href="about.html">關於我們</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <video id="bgvid" autoplay muted >
+            <source src="network.mp4" type="video/mp4" >
+            <source src="network.oggtheora.ogv" type="video/ogg"> 
+        </video>
+        <div class="content">
+            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+        </div>
+    </div>
+    <!--<div class="maincontainer">
+        <div class="thecard">
+            <div class="thefront">
+                <!--<h1>Front of Card</h1>
+                <p>This is the front of the card. It contains important information. Please see overleaf for more details.</p><img src="shin2.png"> </div>
+            <div class="theback">
+                <!--<h1>Back of Card</h1>
+                <p>Your use of this site is subject to the terms and conditions governing this and all transactions.</p>
+                <button>Submit</button><img src="shin3.png"> </div>
+        </div>
+    </div>-->
+    <script type="text/javascript">
+        //preload gif
+        $(function () {});
+        //preloader
+        $(window).on('load', function () {
+            $('.preloader').addClass('complete');
+            $(".preload").fadeOut(500);
+        });
+        // Menu-toggle button
+        $(document).ready(function () {
+            $(".menu-icon").on("click", function () {
+                $("nav ul").toggleClass("showing");
+            });
+        });
+        // Scrolling Effect
+        $(window).on("scroll", function () {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+            }
+            else {
+                $('nav').removeClass('black');
+            }
+        });
+    </script>
+</body>
+<!--<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#myPage">Industry 4.0</a> </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#myPage">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <!--
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#impact">Impact<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#impact">People</a></li>
+                            <li><a href="#impact">Business</a></li>
+                            <li><a href="#impact">Government</a></li>
+                        </ul>
+                    </li>
+-->
+<!--<li><a href="#impact">Impact</a></li>
+                    <li><a href="#future">Future</a></li>
+                    <li><a href="#infographic">Infographic</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+            <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+            <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+        </div>
+    </div>
+</body>-->
+
+</html>

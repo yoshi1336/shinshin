@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>悻。倖</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="e-book.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- include jQuery library from Google CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> </head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <div class="preload"><img src= "GIF.gif" /></div>
+    
+    <div class="preloader"></div>
+    <header>
+        <nav>
+            <div class="menu-icon">
+                <div id="hi"> <a href="#"><h1><img src="logowhite.png" /></h1></a> </div> <i class="fa fa-bars fa-2x"></i> </div>
+            <div class="menu">
+                <ul>
+                    <div class="logo"><img src="logodark.png" /></div>
+                    <li><a href="emotion.html">五種情緒</a></li>
+                    <li><a href="role.html">人物介紹</a></li>
+                    <li><a href="e-book.html">電子繪本</a></li>
+                    <li><a href="about.html">關於我們</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="role1">
+        <div class="container">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-4"> </div>
+            <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
+                <div class="role-content">
+                    <h3>繪本欣賞</h3>
+                    <p>跟著醒醒的腳步體會故事的情節轉折、情緒波動，希望在面對現實生活時，也能給予大家一點點勇氣</p>
+                </div>
+            </div>
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-2"> </div>
+        </div>
+    </section>
+    <div class="ebook1">
+        <h1>Chapter 1~2</h1>
+        <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=f7u323j1w" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+    </div>
+    <div class="ebook1">
+        <h1>Chapter 3~4</h1>
+        <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=fdciwi9t4" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+    </div>
+<!--
+    <div class="ebook">
+        <div class="BookNo">
+            <h1>Chapter 2</h1></div>
+        <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=ftpa7yamz" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+    </div>
+-->
+    <script type="text/javascript">
+        //preload gif
+        $(function () {});
+        //preloader
+        $(window).on('load', function () {
+            $('.preloader').addClass('complete');
+            $(".preload").fadeOut(500);
+        });
+        // Menu-toggle button
+        $(document).ready(function () {
+            $(".menu-icon").on("click", function () {
+                $("nav ul").toggleClass("showing");
+            });
+        });
+        // Scrolling Effect
+        $(window).on("scroll", function () {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+            }
+            else {
+                $('nav').removeClass('black');
+            }
+        });
+        $(function () { //slide animate
+            $(window).scroll(function () {
+                $(".slideanimate").each(function () {
+                    var pos = $(this).offset().top;
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 800) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        });
+    </script>
+    <footer class="container-fluid text-center">
+        <a href="#myPage" title="back to top"> <span class="glyphicon glyphicon-triangle-top"></span> </a>
+        <p>Go to the top!</p>
+    </footer>
+</body>
+
+</html>

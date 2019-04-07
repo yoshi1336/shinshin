@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>password</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="role.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- include jQuery library from Google CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> </head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <div class="preload"><img src="loading_spinner.gif" /></div>
+    <div class="preloader"></div>
+    <header>
+        <nav>
+            <div class="menu-icon">
+                <div id="hi">
+                    <a href="#"><h1><img src="logowhite.png" /></h1></a>
+                </div> 
+                <i class="fa fa-bars fa-2x"></i>
+            </div>
+            <div class="menu">
+                <ul>
+                    <div class="logo"><img src="logodark.png" /></div>
+                    <li><a href="emotion.html">五種情緒</a></li>
+                    <li><a href="role.html">人物介紹</a></li>
+                    <li><a href="e-book.html">電子繪本</a></li>
+                    <li><a href="about.html">關於我們</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="role1">
+            <div class="container">
+                <div class="row slideanimate">
+                    <div class="col-xs-12 col-sm-6 col-md-4"><img src="shin2.png" /></div>
+                    <div class="col-xs-12 col-sm-6 col-md-8">
+                        <div class="role-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h1><a href="#role2"><i class="fa fa-angle-down" aria-hidden="true"></i></a></h1></div>
+            </div>
+        </section>
+        <section id="role2">
+            <div class="container"> <span><img src="shin2.png" /></span>
+                <div class="role-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+            </div>
+            <h1><a href="#role3"><i class="fa fa-angle-down" aria-hidden="true"></i></a></h1> </section>
+        <section id="role3"> </section>
+    </main>
+    <div class="content">
+        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+    </div>
+    <!--<div class="maincontainer">
+        <div class="thecard">
+            <div class="thefront">
+                <!--<h1>Front of Card</h1>
+                <p>This is the front of the card. It contains important information. Please see overleaf for more details.</p><img src="shin2.png"> </div>
+            <div class="theback">
+                <!--<h1>Back of Card</h1>
+                <p>Your use of this site is subject to the terms and conditions governing this and all transactions.</p>
+                <button>Submit</button><img src="shin3.png"> </div>
+        </div>
+    </div>-->
+    <script type="text/javascript">
+        //preload gif
+        $(function () {});
+        //preloader
+        $(window).on('load', function () {
+            $('.preloader').addClass('complete');
+            $(".preload").fadeOut(500);
+        });
+        // Menu-toggle button
+        $(document).ready(function () {
+            $(".menu-icon").on("click", function () {
+                $("nav ul").toggleClass("showing");
+            });
+        });
+        // Scrolling Effect
+        $(window).on("scroll", function () {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+            }
+            else {
+                $('nav').removeClass('black');
+            }
+        });
+        $(function () { //slide animate
+            $(window).scroll(function () {
+                $(".slideanimate").each(function () {
+                    var pos = $(this).offset().top;
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        });
+    </script>
+    <footer class="container-fluid text-center">
+        <a href="#myPage" title="back to top"> <span class="glyphicon glyphicon-triangle-top"></span> </a>
+        <p>Go to the top!</p> <span class="icon"><a href="#"><i class="fab fa-facebook-f"></i></a></span> <span class="icon"><a href="#"><i class="fab fa-youtube"></i></a></span> <span class="icon"><a href="#"><i class="fab fa-twitter"></i></a></span> <span class="icon"><a href="#"><i class="fab fa-instagram"></i></a></span> </footer>
+</body>
+</html>

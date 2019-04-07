@@ -1,0 +1,105 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: lighter;
+}
+
+header { /*put a image in background*/
+    width: 100%;
+    height:100vh; /*a viewport size*/
+    background: url(hero.jpg) no-repeat 50% 50%;/*image in the middle*/
+    background-size:cover; 
+}
+
+.content {
+    width: 94%;
+    margin: 4em auto;/*top and bottom 4em,right and left auto*/
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;/*the same space*/
+}
+
+.logo {
+    line-height: 60px;
+    position: fixed;/*fixed in somewhere*/
+    float: right; /*text wrap allow words to flow right over the image*/
+    margin: 16px 46px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px; /*the same space*/
+}
+
+nav {
+    position: fixed;
+    width:100%;
+    line-height: 60px;/*every element in nav(icon,logo,manu)line height 60px*/
+}
+nav ul {
+    line-height: 60px;/*every ul lin hight 60px*/
+    list-style: none; /*remove bullet*/
+    background-color: rgba(0, 0, 0, 0);/*tranparent*/
+    overflow: hidden;/*overflow content will be hidden*/
+    color: #fff;
+    padding: 0;
+    text-align: right; /*word align from left changed to right*/
+    margin: 0;
+    padding-right: 40px;
+    transition: 1s; /*change value duration*/
+}
+nav.black ul {
+    background: #000;
+}
+nav ul li {
+    display: inline-block; /*to a line*/
+    padding: 16px 40px;
+}
+nav ul li a { /*set the word value*/
+    text-decoration: none;/*no underline*/
+    color: #fff;
+    font-size: 16px;
+}
+
+.menu-icon {
+    line-height: 60px;
+    width: 100%;
+    background: #000;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none; /*hidden*/
+}
+
+@media(max-width: 786px) {
+    .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+    }
+    nav ul {
+        max-height: 0px;
+        background: #345; /*when showing background*/
+    }
+    nav.black ul {
+        background: #000;
+    }
+    .showing {
+        max-height: 40em;
+    }
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px;
+        text-align: center;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
